@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let bannerTime = document.querySelector('.banner__time');
     let bannerInfoTop = document.querySelector('.banner__info-top');
 
-    if (!isIOS() && !isMacOS() && itemMagenta && bannerDate && bannerTime) {
+    if (!isIOS() && !isMacOS() && bannerInfoTop && bannerDate && bannerTime && bannerTeam) {
         bannerTeam.classList.add('noios-padding');
         bannerDate.classList.add('noios-padding');
         bannerTime.classList.add('noios-padding');
