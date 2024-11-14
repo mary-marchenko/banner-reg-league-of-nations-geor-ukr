@@ -21,15 +21,17 @@ document.addEventListener("DOMContentLoaded", function() {
         return navigator.platform === 'MacIntel' && !navigator.userAgent.includes('Mobile');
     }
 
-    let bannerTeam = document.querySelector('.banner__team');
+    let bannerTeam = document.querySelectorAll('.banner__team');
     let bannerDate = document.querySelector('.banner__date');
     let bannerTime = document.querySelector('.banner__time');
     let bannerInfoTop = document.querySelector('.banner__info-top');
 
     if (!isIOS() && !isMacOS() && bannerInfoTop && bannerDate && bannerTime && bannerTeam) {
-        bannerTeam.classList.add('noios-padding');
         bannerDate.classList.add('noios-padding');
         bannerTime.classList.add('noios-padding');
         bannerInfoTop.classList.add('noios-padding');
+        bannerTeam.forEach(function(bannerTeam) {
+            bannerTeam.classList.add('noios-padding');
+        });
     }
 });
